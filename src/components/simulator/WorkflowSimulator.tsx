@@ -14,9 +14,7 @@ export const WorkflowSimulator: React.FC<WorkflowSimulatorProps> = ({ nodes, edg
   const [paused, setPaused] = useState(false);
   const [speed, setSpeed] = useState(1000);
 
-  // -----------------------------
-  // CONTROLS
-  // -----------------------------
+  
   const startSimulation = () => {
     if (!nodes.length) return;
 
@@ -45,9 +43,7 @@ export const WorkflowSimulator: React.FC<WorkflowSimulatorProps> = ({ nodes, edg
 
   const resetSimulation = () => stopSimulation();
 
-  // -----------------------------
-  // SIMULATION LOOP
-  // -----------------------------
+  
   useEffect(() => {
     if (!running || paused || activeNodes.length === 0) return;
 
@@ -76,9 +72,7 @@ export const WorkflowSimulator: React.FC<WorkflowSimulatorProps> = ({ nodes, edg
 
   const isActive = (id: string) => activeNodes.includes(id);
 
-  // -----------------------------
-  // RENDER UI
-  // -----------------------------
+  
   return (
     <div className="w-full max-w-4xl mx-auto p-4 bg-white/90 backdrop-blur-sm border border-gray-200 rounded-2xl shadow-lg flex flex-col gap-4">
 
