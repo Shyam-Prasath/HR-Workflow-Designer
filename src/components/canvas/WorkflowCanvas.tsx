@@ -19,6 +19,7 @@ type WorkflowCanvasProps = {
   edges: WorkflowEdge[];
   setNodes: (nodes: WorkflowNode[]) => void;
   setEdges: (edges: WorkflowEdge[]) => void;
+  highlightedNodes?: string[];
 };
 
 export const WorkflowCanvas: React.FC<WorkflowCanvasProps> = ({ nodes, edges, setNodes, setEdges }) => {
