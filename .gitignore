@@ -1,0 +1,53 @@
+# Node modules
+node_modules/
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Build output
+dist/
+build/
+out/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE / Editor folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Mac / Linux / Windows system files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Next.js / React cache (if any)
+.next/
+.cache/
+
+# Storybook
+.storybook-out/
+
+# Test coverage
+coverage/
+
+# Logs
+logs/
+*.log
+
+# Yarn
+.pnp.*
