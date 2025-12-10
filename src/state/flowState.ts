@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-// Node types
+
 export type NodeType = "start" | "task" | "approval" | "automated" | "end";
 
 export interface WorkflowNodeData {
@@ -18,20 +18,20 @@ export interface WorkflowNode {
 
 export interface WorkflowEdge {
   id: string;
-  source: string;   // source node id
-  target: string;   // target node id
+  source: string;   
+  target: string;   
 }
 
 interface FlowState {
   nodes: WorkflowNode[];
   edges: WorkflowEdge[];
-  selectedNodeId: string | null;                  // <-- added
+  selectedNodeId: string | null;                  
   addNode: (type: NodeType) => void;
   setNodes: (nodes: WorkflowNode[]) => void;
   setEdges: (edges: WorkflowEdge[]) => void;
   updateNodeData: (id: string, data: Partial<WorkflowNodeData>) => void;
-  selectNode: (id: string | null) => void;       // <-- added
-  removeNode: (id: string) => void;              // <-- added
+  selectNode: (id: string | null) => void;       
+  removeNode: (id: string) => void;              
 }
 
 export const useFlowState = create<FlowState>((set, get) => ({
