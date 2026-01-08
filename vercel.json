@@ -10,9 +10,12 @@
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/" }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+    {
+      "handle": "filesystem"
+    },
+    {
+      "src": "/.*",
+      "dest": "/index.html"
+    }
+  ]
 }
